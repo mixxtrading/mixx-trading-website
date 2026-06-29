@@ -64,14 +64,13 @@ margin-right:8px;
 }
 
 .hero{
-position:relative;
-height: auto;
-min-height: 620px;
-display:flex;
-align-items:center;
-padding:0 8%;
-overflow:hidden;
-margin-top:95px;
+    position:relative;
+    height:620px;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+    overflow:hidden;
+    margin-top:95px;
 }
 
 .hero-bg{
