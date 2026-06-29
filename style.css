@@ -290,4 +290,25 @@ padding:30px 20px;
 font-size:18px;
 }
 
+@media (max-width:768px){
+
+.hero{
+    min-height:520px;
+    padding:0 6%;
 }
+
+.hero h1{
+    font-size:54px;
+    line-height:1.05;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.hero-bg{
+    object-position:70% center;
+}
+
+
