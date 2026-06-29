@@ -312,61 +312,30 @@ background:#d67a2a;
 
 }
 
-@media(max-width:900px){
+/* ===========================
+   MOBILE RESPONSIVE DESIGN
+=========================== */
+
+@media screen and (max-width:900px){
 
 header{
-flex-direction:column;
-padding:15px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
 }
 
 .logo img{
-height:65px;
+    height:70px;
+    margin-bottom:10px;
 }
 
-.contact-top{
-flex-direction:column;
-gap:12px;
-}
-
-.hero{
-height:80vh;
-margin-top:120px;
-}
-
-.hero-text h1{
-font-size:42px;
-}
-
-.hero-text p{
-font-size:16px;
-}
-
-.about h2,
-.minerals h2,
-.contact h2{
-font-size:30px;
-}
-
-.about,
-.minerals,
-.contact{
-padding:70px 25px;
-}
-
-.contact-box{
-flex-direction:column;
-}
-
-.card{
-padding:30px 20px;
-font-size:18px;
-
-/* Header contact buttons */
 .contact-top{
     display:flex;
     flex-direction:column;
     align-items:center;
     gap:12px;
+    width:100%;
 }
 
 .contact-link{
@@ -374,9 +343,9 @@ font-size:18px;
     align-items:center;
     justify-content:center;
     gap:10px;
-    width:100%;
-    max-width:320px;
-    padding:12px 18px;
+    width:90%;
+    max-width:300px;
+    padding:12px 20px;
     border-radius:8px;
     background:#f7f7f7;
     text-decoration:none;
@@ -384,15 +353,27 @@ font-size:18px;
     font-weight:600;
 }
 
-@media (max-width:768px){
+/* HERO */
 
 .hero{
+    height:88vh;
     min-height:700px;
-    padding:0 6%;
+    margin-top:120px;
+    padding:0 8%;
+    justify-content:flex-start;
+}
+
+.hero-bg{
+    object-fit:cover;
+    object-position:center center;
+}
+
+.hero-text{
+    max-width:100%;
 }
 
 .hero h1{
-    font-size:54px;
+    font-size:48px;
     line-height:1.05;
 }
 
@@ -401,131 +382,76 @@ font-size:18px;
     line-height:1.6;
 }
 
-.hero-bg{
-    object-fit:cover;
-    object-position:center center;
+/* ABOUT */
+
+.about,
+.minerals,
+.contact-section{
+    padding:70px 8%;
 }
 
-
-@media (max-width:768px){
-
-header{
-    flex-direction:column;
-    padding:15px 0;
+.about h2,
+.minerals h2,
+.contact-section h2{
+    font-size:44px;
+    line-height:1.2;
 }
 
-.contact-top{
-    flex-direction:column;
-    width:100%;
-    gap:12px;
+.about p,
+.contact-section p{
+    font-size:18px;
+    line-height:1.8;
 }
 
-.contact-link{
-    width:90%;
-    justify-content:center;
-}
+/* MINERAL GRID */
 
-.logo img{
-    height:75px;
-}
-
-.overlay{
-    background:rgba(0,0,0,.45);
-}
-    
-.contact-top{
-    display:flex;
-    align-items:center;
+.grid{
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
 }
 
-.contact-link{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-    color:#222;
-    background:#fff;
-    padding:10px 18px;
-    border-radius:30px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    transition:.3s;
-    font-weight:600;
+.card{
+    padding:28px 15px;
+    font-size:18px;
 }
 
-.contact-link:hover{
-    transform:translateY(-2px);
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-}
-
-.contact-link .fa-phone{
-    color:#d67a2a;
-}
-
-.contact-link .fa-whatsapp{
-    color:#25D366;
-}
-
-.contact-link .fa-envelope{
-    color:#d67a2a;
-}
-
-.contact-section{
-    padding:90px 8%;
-    background:#ffffff;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
+/* CONTACT */
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:40px;
+    grid-template-columns:1fr;
+    gap:22px;
 }
 
 .contact-card{
-    background:#fff;
-    border-radius:12px;
-    padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
     text-align:center;
-    transition:.3s;
-}
-
-.contact-card:hover{
-    transform:translateY(-6px);
+    padding:35px 25px;
 }
 
 .contact-card i{
-    font-size:34px;
-    color:#d97706;
-    margin-bottom:15px;
+    font-size:36px;
 }
 
 .contact-card h3{
-    color:#1f4d36;
-    margin-bottom:12px;
+    font-size:28px;
 }
 
 .contact-card p{
-    margin-bottom:18px;
-    color:#666;
+    font-size:18px;
 }
 
 .contact-card a{
     display:inline-block;
-    padding:12px 24px;
-    background:#d97706;
+    margin-top:15px;
+    padding:14px 30px;
+    border-radius:40px;
+    background:#1f5c3d;
     color:#fff;
     text-decoration:none;
-    border-radius:8px;
     font-weight:600;
 }
 
-.contact-card a:hover{
-    background:#b45309;
+footer{
+    padding:35px 20px;
+    text-align:center;
 }
