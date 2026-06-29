@@ -469,3 +469,63 @@ header{
 .contact-link .fa-envelope{
     color:#d67a2a;
 }
+
+.contact-section{
+    padding:90px 8%;
+    background:#ffffff;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.contact-card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+}
+
+.contact-card i{
+    font-size:34px;
+    color:#d97706;
+    margin-bottom:15px;
+}
+
+.contact-card h3{
+    color:#1f4d36;
+    margin-bottom:12px;
+}
+
+.contact-card p{
+    margin-bottom:18px;
+    color:#666;
+}
+
+.contact-card a{
+    display:inline-block;
+    padding:12px 24px;
+    background:#d97706;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.contact-card a:hover{
+    background:#b45309;
+}
