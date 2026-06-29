@@ -65,7 +65,8 @@ margin-right:8px;
 
 .hero{
 position:relative;
-height:100vh;
+height: auto;
+min-height: 620px;
 display:flex;
 align-items:center;
 padding:0 8%;
