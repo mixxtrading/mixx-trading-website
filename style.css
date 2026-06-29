@@ -73,14 +73,20 @@ margin-right:8px;
     margin-top:95px;
 }
 
+.hero picture{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
 .hero-bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right center;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:right center;
+    display:block;
 }
 
 .overlay{
@@ -309,10 +315,7 @@ font-size:18px;
 
 .hero-bg{
     object-fit:cover;
-    object-position:70% center;
-    transform:scale(0.80);
-}
-
+    object-position:center center;
 }
 
 
