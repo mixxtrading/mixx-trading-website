@@ -7,30 +7,39 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#ffffff;
+background:#fff;
 color:#222;
 line-height:1.7;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 header{
-position:sticky;
+position:fixed;
 top:0;
-background:#fff;
+left:0;
+width:100%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-z-index:1000;
+background:#ffffff;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:999;
 }
 
 .logo img{
-height:70px;
+height:78px;
 }
 
 .contact-top{
 display:flex;
-gap:25px;
+gap:30px;
+align-items:center;
 }
 
 .contact-top a{
@@ -41,92 +50,184 @@ transition:.3s;
 }
 
 .contact-top a:hover{
-color:#C76A2A;
+color:#c76a2a;
 }
 
-.contact-top i{
+.contact-top .fa-whatsapp{
+color:#2E6B3D;
 margin-right:8px;
-color:#C76A2A;
+}
+
+.contact-top .fa-envelope{
+color:#c76a2a;
+margin-right:8px;
 }
 
 .hero{
+position:relative;
+height:100vh;
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:80px 8%;
-gap:50px;
+padding:0 8%;
+overflow:hidden;
+margin-top:95px;
 }
 
-.hero-content{
-flex:1;
-}
-
-.hero-content h1{
-font-size:58px;
-line-height:1.1;
-color:#2E6B3D;
-margin-bottom:20px;
-}
-
-.hero-content p{
-font-size:18px;
-max-width:550px;
-}
-
-.hero-image{
-flex:1;
-}
-
-.hero-image img{
+.hero-bg{
+position:absolute;
+top:0;
+left:0;
 width:100%;
-border-radius:15px;
+height:100%;
+object-fit:cover;
 }
 
-.about,
-.minerals,
-.contact{
-padding:80px 8%;
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
 }
 
-.about h2,
-.minerals h2,
-.contact h2{
-font-size:36px;
-margin-bottom:25px;
+.hero-text{
+position:relative;
+z-index:2;
+color:#fff;
+max-width:650px;
+}
+
+.hero-text h1{
+font-size:68px;
+font-weight:800;
+line-height:1.05;
+letter-spacing:1px;
+}
+
+.hero-text span{
+color:#D88432;
+}
+
+.line{
+width:120px;
+height:5px;
+background:#D88432;
+margin:25px 0;
+border-radius:5px;
+}
+
+.hero-text p{
+font-size:20px;
+max-width:600px;
+}
+
+.about{
+padding:100px 8%;
+}
+
+.about h4{
+color:#D88432;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.about h2{
+font-size:42px;
 color:#2E6B3D;
+margin-bottom:25px;
+}
+
+.about p{
+max-width:850px;
+font-size:18px;
+color:#555;
+}
+.minerals{
+padding:100px 8%;
+background:#f8f8f8;
+}
+
+.minerals h4{
+color:#D88432;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.minerals h2{
+font-size:42px;
+color:#2E6B3D;
+margin-bottom:50px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:25px;
-margin-top:30px;
 }
 
 .card{
 background:#fff;
-border:2px solid #eee;
-padding:40px 20px;
+padding:40px 25px;
 border-radius:12px;
-text-align:center;
+border:1px solid #e5e5e5;
+font-size:20px;
 font-weight:600;
-transition:.3s;
+text-align:center;
+transition:.35s ease;
+cursor:pointer;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
 }
 
 .card:hover{
-border-color:#C76A2A;
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+transform:translateY(-10px);
+border-color:#D88432;
+box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+
+.contact{
+padding:100px 8%;
+background:#fff;
+text-align:center;
+}
+
+.contact h4{
+color:#D88432;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.contact h2{
+font-size:42px;
+color:#2E6B3D;
+margin-bottom:20px;
 }
 
 .contact p{
-margin:18px 0;
 font-size:18px;
+color:#555;
+margin-bottom:40px;
 }
 
-.contact a{
+.contact-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.contact-box div{
+background:#f7f7f7;
+padding:25px 30px;
+border-radius:12px;
+min-width:280px;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.contact-box a{
 text-decoration:none;
 color:#222;
+font-weight:500;
 }
 
 .green{
@@ -134,33 +235,58 @@ color:#2E6B3D;
 margin-right:10px;
 }
 
+.contact-box i{
+font-size:22px;
+}
+
 @media(max-width:900px){
 
 header{
 flex-direction:column;
-gap:20px;
+padding:15px;
+}
+
+.logo img{
+height:65px;
 }
 
 .contact-top{
 flex-direction:column;
-text-align:center;
+gap:12px;
 }
 
 .hero{
-flex-direction:column;
-text-align:center;
+height:80vh;
+margin-top:120px;
 }
 
-.hero-content h1{
+.hero-text h1{
 font-size:42px;
 }
 
-.hero-content p{
-margin:auto;
+.hero-text p{
+font-size:16px;
 }
 
-.logo img{
-height:60px;
+.about h2,
+.minerals h2,
+.contact h2{
+font-size:30px;
 }
 
-  }
+.about,
+.minerals,
+.contact{
+padding:70px 25px;
+}
+
+.contact-box{
+flex-direction:column;
+}
+
+.card{
+padding:30px 20px;
+font-size:18px;
+}
+
+}
